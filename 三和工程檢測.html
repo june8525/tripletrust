@@ -1,0 +1,181 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" id="u0" href="https://zh-tw.rakko.tools/tools/129/lib/tinymce/skins/ui/oxide/content.min.css"><link rel="stylesheet" type="text/css" id="u1" href="https://zh-tw.rakko.tools/tools/129/lib/tinymce/skins/content/default/content.min.css"><link rel="stylesheet" text="text/css" data-mce-href="https://tripletrust.com.tw/_static/??-eJytkt1qwzAMRl9ormk22uxi7KZQBrvansCxVFeb/4iclbz9lBJKVkpGSy9FdD4dKT5kZVMsGIvOvnMUWXvTp64o1xJoLr3HhWV+OGRF0foOkPUX64BABj2GgZwWWXBslUdnbL8IFP+l5du0njLnaq6TssHW6aYjD9qmkFOUDv5res7Z1Phkv1mfJDaYMQJGS1Js08YA9PpzyOAx25uCXM4Ty14kpeUY18tUU8gKEcGjDkbUL+jPQuPaqVW79tgPV0fYnVrPne00QhtmlGNJn56b1mWfDEzBgciJi6rqennVnAOBw6J+CDBdJemp0SZSkE1THH+waBvAt/iOu9mHMmeyRwMU3d1cbvWQNIe3wkDDQdu7LfFBbn/zRTkbe9ll/iE9Du2v4WW5Xj1Vz1VVr34Bq6m9dw==" href="https://tripletrust.com.tw/_static/??-eJytkt1qwzAMRl9ormk22uxi7KZQBrvansCxVFeb/4iclbz9lBJKVkpGSy9FdD4dKT5kZVMsGIvOvnMUWXvTp64o1xJoLr3HhWV+OGRF0foOkPUX64BABj2GgZwWWXBslUdnbL8IFP+l5du0njLnaq6TssHW6aYjD9qmkFOUDv5res7Z1Phkv1mfJDaYMQJGS1Js08YA9PpzyOAx25uCXM4Ty14kpeUY18tUU8gKEcGjDkbUL+jPQuPaqVW79tgPV0fYnVrPne00QhtmlGNJn56b1mWfDEzBgciJi6rqennVnAOBw6J+CDBdJemp0SZSkE1THH+waBvAt/iOu9mHMmeyRwMU3d1cbvWQNIe3wkDDQdu7LfFBbn/zRTkbe9ll/iE9Du2v4WW5Xj1Vz1VVr34Bq6m9dw==" data-mce-fullpage="1"><link rel="stylesheet" text="text/css" data-mce-href="https://tripletrust.com.tw/wp-content/themes/blocksy-child/assets/css/styles.css?m=1742995823" href="https://tripletrust.com.tw/wp-content/themes/blocksy-child/assets/css/styles.css?m=1742995823" data-mce-fullpage="1"><style id="fullpage_styles">
+        :root {
+            --bg-dark-main: #242c31;   /* 網頁主背景 */
+            --bg-card: #2c3845;        /* 卡片背景 (對應截圖中的區塊) */
+            --bg-card-hover: #354250;
+            --text-main: #ffffff;      /* 主標題白 */
+            --text-sub: #e1e8ed;       /* 內文淺灰 */
+            --accent-blue: #6d98c5;    /* 連結與強調色 */
+            --border-color: #3e4c5e;
+        }
+
+        body {
+            background-color: var(--bg-dark-main) !important;
+            color: var(--text-sub) !important;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        /* 文章容器 */
+        .article-wrap {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* 標題樣式 */
+        .article-content h1 {
+            color: var(--text-main);
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            border-left: 6px solid var(--accent-blue);
+            padding-left: 20px;
+            line-height: 1.4;
+        }
+
+        .article-content h2 {
+            color: var(--text-main);
+            font-size: 1.6rem;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+        }
+        
+        /* 模擬截圖中的 icon 裝飾 */
+        .article-content h2::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-blue);
+            margin-right: 12px;
+            transform: rotate(45deg); /* 菱形裝飾 */
+        }
+
+        .article-content h3 {
+            color: var(--accent-blue);
+            font-size: 1.3rem;
+            margin-top: 30px;
+            font-weight: 600;
+        }
+
+        .article-content p, .article-content li {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-sub);
+            margin-bottom: 1.5rem;
+        }
+
+        /* 強調文字 */
+        strong {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* 仿照截圖的卡片樣式 (用於 BLUF 摘要與重點區塊) */
+        .tech-card {
+            background-color: var(--bg-card);
+            padding: 30px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255,255,255,0.05);
+            /* 模擬截圖的切角感可以用 clip-path，但為兼容性改用左側飾條 */
+            border-left: 4px solid var(--accent-blue); 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .bluf-title {
+            color: var(--accent-blue);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        /* 深色表格樣式 */
+        .article-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+        }
+        .article-content th {
+            background-color: #1f2830;
+            color: var(--accent-blue);
+            padding: 15px;
+            text-align: left;
+            border-bottom: 2px solid var(--border-color);
+        }
+        .article-content td {
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px;
+            color: var(--text-sub);
+        }
+        .article-content tr:hover {
+            background-color: var(--bg-card-hover);
+        }
+
+        /* FAQ 區塊 */
+        .faq-item {
+            background-color: var(--bg-card);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        .faq-question {
+            font-weight: 700;
+            color: #fff;
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+        }
+        .faq-answer {
+            color: #ccc;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        /* CTA 按鈕 (紅色/強調色) */
+        .cta-box {
+            background: linear-gradient(135deg, var(--bg-card) 0%, #1f2830 100%);
+            border: 1px solid var(--border-color);
+            padding: 50px;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 60px;
+        }
+        .cta-btn {
+            display: inline-block;
+            background-color: #cf2e2e; /* 品牌紅色，假設有使用紅色作為行動呼籲 */
+            color: white;
+            padding: 15px 40px;
+            border-radius: 4px;
+            font-weight: 700;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background 0.3s;
+            letter-spacing: 1px;
+        }
+        .cta-btn:hover {
+            background-color: #b02121;
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* 列表樣式調整 */
+        ul { padding-left: 20px; }
+        li::marker { color: var(--accent-blue); }
+
+        /* Mobile RWD */
+        @media (max-width: 768px) {
+            .article-wrap { padding: 0 15px; }
+            .article-content h1 { font-size: 1.8rem; border-left-width: 4px; }
+            .tech-card { padding: 20px; }
+            .article-content table { display: block; overflow-x: auto; }
+        }
+    </style></head><body id="tinymce" class="mce-content-body " data-id="content" contenteditable="true" spellcheck="false"><div id="main-container"><header id="header" class="ct-header" data-id="type-1"><div data-device="desktop"><div data-row="middle" style="background-color: var(--bg-dark-main); border-bottom: 1px solid var(--border-color);" data-mce-style="background-color: var(--bg-dark-main); border-bottom: 1px solid var(--border-color);"><div class="ct-container-fluid"><div data-column="start" data-placements="1"><div class="site-branding" data-id="logo"><a href="https://tripletrust.com.tw/" class="site-logo-container" data-mce-href="https://tripletrust.com.tw/"> <img width="268" height="53" src="https://tripletrust.com.tw/wp-content/uploads/2025/03/TriipleTrust-main-logo-w.svg" alt="三和工程檢測" data-mce-src="https://tripletrust.com.tw/wp-content/uploads/2025/03/TriipleTrust-main-logo-w.svg"> </a></div></div><div data-column="end" data-placements="1"><nav id="header-menu-1" class="header-menu-1 menu-container"><ul id="menu-primary" class="menu"><li class="menu-item"><a href="https://tripletrust.com.tw/" class="ct-menu-link" style="color: #fff;" data-mce-href="https://tripletrust.com.tw/" data-mce-style="color: #fff;">首頁</a></li><li class="menu-item"><a href="#" class="ct-menu-link" style="color: #fff;" data-mce-href="#" data-mce-style="color: #fff;">關於三和</a></li><li class="menu-item"><a href="#" class="ct-menu-link" style="color: #fff;" data-mce-href="#" data-mce-style="color: #fff;">檢測實績</a></li><li class="menu-item"><a href="#" class="ct-menu-link" style="color: var(--accent-blue);" data-mce-href="#" data-mce-style="color: var(--accent-blue);">驗屋知識</a></li><li class="menu-item"><a href="#" class="ct-menu-link" style="color: #fff;" data-mce-href="#" data-mce-style="color: #fff;">預約驗屋</a></li></ul></nav></div></div></div></div><div data-device="mobile" style="background: var(--bg-dark-main); padding: 15px; border-bottom: 1px solid var(--border-color);" data-mce-style="background: var(--bg-dark-main); padding: 15px; border-bottom: 1px solid var(--border-color);"><div class="ct-container-fluid" style="display: flex; justify-content: center;" data-mce-style="display: flex; justify-content: center;"><img width="180" src="https://tripletrust.com.tw/wp-content/uploads/2025/03/mobile-logo-w.svg" alt="三和工程檢測" data-mce-src="https://tripletrust.com.tw/wp-content/uploads/2025/03/mobile-logo-w.svg"></div></div></header><main id="main" class="site-main"><div class="ct-container"><div class="article-wrap"><article class="article-content"><h1>驗屋有必要嗎？一次搞懂驗屋費用、流程與 5 大檢查項目</h1><div class="tech-card"><span class="bluf-title">文章摘要&nbsp;</span><p style="margin-bottom: 0;" data-mce-style="margin-bottom: 0;"><strong>驗屋絕對有其必要性</strong>，能有效避免交屋後發生漏水、電力異常或結構瑕疵等高額修繕糾紛。透過專業儀器檢測，屋主能取得具公信力的缺失報告，作為要求建商修繕或議價的談判籌碼，確保居住安全與資產價值。本文由 <strong>三和工程檢測</strong> 為您解析驗屋的關鍵細節。</p></div><h2>為什麼需要驗屋？自行驗屋 vs 專業驗屋</h2><p>許多屋主在交屋前都會面臨一個抉擇：「我能自己驗屋嗎？」事實上，肉眼能看到的瑕疵通常只是冰山一角。專業驗屋公司與自行驗屋最大的差異在於 <strong>儀器設備</strong> 與 <strong>法規知識</strong>。</p><ul><li><strong>自行驗屋</strong>：僅能檢查外觀刮痕、門窗開關是否順暢、馬桶是否通水。</li><li><strong>專業驗屋</strong>：利用 <strong>熱顯像儀</strong> 檢測滲漏水、<strong>雷射水平儀</strong> 測量地面傾斜、<strong>內視鏡</strong> 檢查管線堵塞。</li></ul><p>對於動輒千萬的房地產投資，支付少許費用進行專業檢測，是保障資產最划算的保險。</p><h2>驗屋費用怎麼算？市場行情全解析</h2><p>消費者最關心的問題通常是價格。驗屋費用並非一成不變，通常取決於坪數與服務內容。</p><div class="tech-card" style="border-left-color: #fff;" data-mce-style="border-left-color: #fff;"><p style="margin-bottom: 0; color: #fff; font-size: 1.1rem;" data-mce-style="margin-bottom: 0; color: #fff; font-size: 1.1rem;"><strong>核心解答：</strong>驗屋費用通常依據室內實坪計算，市場行情約為每坪 <strong>$450 至 $600 元</strong>，或以總價 <strong>$12,000 至 $18,000 元</strong> 起跳。影響報價的因素包含透天或大樓房型、複驗次數及使用的高階儀器等級。</p></div><h3>驗屋費用估算參考表</h3><table class="mce-item-table"><thead><tr><th>房型類別</th><th>計價方式</th><th>預估費用範圍 (新台幣)</th><th>備註</th></tr></thead><tbody><tr><td><strong>大樓/華廈 (單層)</strong></td><td>依實坪計算</td><td>$12,000 - $18,000</td><td>含初驗及完整報告</td></tr><tr><td><strong>透天別墅</strong></td><td>依總坪數/樓層</td><td>$20,000 起</td><td>需檢測頂樓防水與水塔</td></tr><tr><td><strong>中古屋</strong></td><td>專案報價</td><td>$15,000 起</td><td>重點在結構與管線老化檢測</td></tr><tr><td><strong>複驗費用</strong></td><td>次數計價</td><td>$3,000 - $5,000 / 次</td><td>確認建商修繕完成度</td></tr></tbody></table><p><small style="color: #888;" data-mce-style="color: #888;">註：實際報價請以三和工程檢測官方評估為主，建議提供平面圖以獲取精準報價。</small></p><h2>驗屋檢查項目包含哪些？(SOP 重點清單)</h2><p>為了確保房屋達到 <strong>交屋標準 (Handover Standards)</strong>，完整的驗屋流程必須涵蓋以下五大系統：</p><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px;" data-mce-style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px;"><div class="tech-card" style="margin-bottom: 0;" data-mce-style="margin-bottom: 0;"><h3>1. 排水與防水系統</h3><ul><li>廚房、浴室、陽台進行 <strong>積水測試</strong>。</li><li>利用 <strong>熱顯像儀</strong> 檢查窗框與牆角是否有滲漏水跡象。</li><li><strong>內視鏡</strong> 檢查排水管是否有水泥塊堵塞。</li></ul></div><div class="tech-card" style="margin-bottom: 0;" data-mce-style="margin-bottom: 0;"><h3>2. 電力系統</h3><ul><li>檢測插座 <strong>電壓、極性</strong> 是否正確。</li><li>測試 <strong>漏電斷路器</strong> 是否正常運作。</li><li>網路、電視、電話訊號（弱電）測試。</li></ul></div><div class="tech-card" style="margin-bottom: 0;" data-mce-style="margin-bottom: 0;"><h3>3. 結構與裝修</h3><ul><li>地磚空心檢測：敲擊檢查 <strong>空鼓</strong>。</li><li>牆面油漆平整度與裂縫檢查。</li><li>梁柱結構垂直度測量。</li></ul></div></div><h2>常見問題 FAQ</h2><div class="faq-item"><div class="faq-question">Q1：新成屋驗屋的最佳時間點是什麼時候？</div><p class="faq-answer">建議在建商通知<strong>「交屋通知」後、正式「過戶撥款」</strong>前進行驗屋。這樣若發現重大瑕疵，屋主仍保有尾款或拒絕交屋的談判權利。</p></div><div class="faq-item"><div class="faq-question">Q2：驗屋發現缺失，建商不處理怎麼辦？</div><p class="faq-answer">透過三和工程檢測出具的 <strong>專業驗屋報告</strong>，內容包含照片與數據佐證，具有法律參考效力。您可以依此要求建商限期改善，或在驗收單上註明「未修繕完成」並保留部分交屋款項。</p></div><div class="faq-item"><div class="faq-question">Q3：驗屋需要多久時間？</div><p class="faq-answer">一般 30 坪左右的標準三房，初驗約需 <strong>2 至 3 小時</strong>。我們會進行地毯式搜索，並在現場直接與屋主解說發現的缺失。</p></div><div class="cta-box"><h3 style="color: #fff; margin-bottom: 15px;" data-mce-style="color: #fff; margin-bottom: 15px;">別讓夢想家變成修繕惡夢</h3><p>準備好進行交屋了嗎？為您的愛家進行最嚴格的健康檢查。</p><a href="#contact" class="cta-btn" data-mce-href="#contact">立即預約諮詢 / 索取報價單</a></div></article></div></div></main><footer id="footer" class="ct-footer" data-id="type-1"><div data-row="middle" style="background-color: #171f21; padding: 50px 0; border-top: 1px solid var(--border-color);" data-mce-style="background-color: #171f21; padding: 50px 0; border-top: 1px solid var(--border-color);"><div class="ct-container-fluid" style="text-align: center;" data-mce-style="text-align: center;"><div style="margin-bottom: 20px;" data-mce-style="margin-bottom: 20px;"><img width="80" src="https://tripletrust.com.tw/wp-content/uploads/2025/03/20231130025140181.png" alt="中華房屋品質查驗協會" data-mce-src="https://tripletrust.com.tw/wp-content/uploads/2025/03/20231130025140181.png"><h3 style="color: #fff; margin-top: 15px; font-size: 1.2rem;" data-mce-style="color: #fff; margin-top: 15px; font-size: 1.2rem;">三和工程檢測</h3><p style="font-size: 0.9rem; color: #888; max-width: 600px; margin: 10px auto;" data-mce-style="font-size: 0.9rem; color: #888; max-width: 600px; margin: 10px auto;">我們致力於房屋檢測水準與技術，確保房屋買家與賣家能夠放心地進行交易。團隊由各領域專業人員所組成，具有卓越的專業知識和技能， 提供最可靠的技術支援與檢驗服務</p></div><div class="contact-info" style="color: #fff;" data-mce-style="color: #fff;"><div style="margin-bottom: 10px;" data-mce-style="margin-bottom: 10px;"> 02-6604-1715</div><div> contact@tripletrust.com.tw</div></div></div></div><div data-row="bottom" style="background-color: #000; padding: 15px 0;" data-mce-style="background-color: #000; padding: 15px 0;"><div class="ct-container"><div data-column="copyright" style="text-align: center; color: #555; font-size: 12px;" data-mce-style="text-align: center; color: #555; font-size: 12px;"><p>三和工程檢測-專業驗屋 © 2025 - 版權所有</p></div></div></div></footer></div></body></html>
